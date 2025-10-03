@@ -16,14 +16,14 @@
             background: #000;
             color: #fff;
             overflow-x: hidden;
-            background-image: url('https://i.imgur.com/grumio-background.jpg');
+            background-image: url('https://media1.tenor.com/m/5p9UoiqsnD0AAAAd/gameface-grumio.gif');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             position: relative;
         }
 
-        /* Dark overlay for better text readability. */
+        /* Dark overlay for better text readability */
         body::before {
             content: '';
             position: fixed;
@@ -131,21 +131,6 @@
             font-size: 4rem;
             margin-bottom: 20px;
             text-transform: uppercase;
-        }
-
-        .hero-image {
-            max-width: 300px;
-            margin: 30px 0;
-            border-radius: 20px;
-            border: 3px solid #ff0000;
-            box-shadow: 0 0 30px #ff0000;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            height: 300px;
         }
 
         /* Sections */
@@ -301,9 +286,6 @@
     <section class="hero">
         <h1 class="rainbow-text">GRUMIO</h1>
         <div class="battle-cry">INCREDIBILIS!</div>
-        <div class="hero-image">
-            GRUMIO IMAGE
-        </div>
     </section>
 
     <!-- About Section -->
@@ -386,14 +368,6 @@
                 header.style.background = 'rgba(0, 0, 0, 0.9)';
             }
         });
-
-        // Add floating animation to hero image
-        const heroImage = document.querySelector('.hero-image');
-        if (heroImage) {
-            setInterval(() => {
-                heroImage.style.transform = `translateY(${Math.sin(Date.now() / 1000) * 10}px)`;
-            }, 50);
-        }
 
         // Battle cry animation
         const battleCry = document.querySelector('.battle-cry');
