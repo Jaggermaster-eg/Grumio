@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GigaChad - $CHAD</title>
+    <title>Grumio - $TENETTE</title>
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -36,7 +35,7 @@
 
         /* Glow text effect */
         .glow-text {
-            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
         }
 
         /* Header styles */
@@ -48,7 +47,7 @@
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 15px 0;
-            border-bottom: 2px solid #00ffff;
+            border-bottom: 2px solid #ff0000;
         }
 
         .nav-container {
@@ -63,7 +62,7 @@
         .logo {
             font-size: 2rem;
             font-weight: bold;
-            color: #00ffff;
+            color: #ff0000;
         }
 
         .nav-menu {
@@ -79,23 +78,25 @@
         }
 
         .nav-menu a:hover {
-            color: #00ffff;
+            color: #ff0000;
         }
 
         .buy-button {
-            background: linear-gradient(45deg, #ff0000, #ff8000);
+            background: linear-gradient(45deg, #8B0000, #B22222);
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 25px;
             font-weight: bold;
             cursor: pointer;
             text-decoration: none;
             transition: transform 0.3s;
+            font-size: 1.1rem;
         }
 
         .buy-button:hover {
             transform: scale(1.05);
+            background: linear-gradient(45deg, #B22222, #FF0000);
         }
 
         /* Hero section */
@@ -107,43 +108,21 @@
             align-items: center;
             text-align: center;
             padding: 100px 20px 50px;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            background: linear-gradient(135deg, #0a0a0a 0%, #2e1a1a 50%, #3e1616 100%);
         }
 
         .hero h1 {
             font-size: 4rem;
             margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
         .hero-image {
             max-width: 300px;
             margin: 30px 0;
             border-radius: 20px;
-            border: 3px solid #00ffff;
-            box-shadow: 0 0 30px #00ffff;
-        }
-
-        .hero-links {
-            display: flex;
-            gap: 30px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .hero-links a {
-            color: #00ffff;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #00ffff;
-            padding: 10px 20px;
-            border-radius: 25px;
-            transition: all 0.3s;
-        }
-
-        .hero-links a:hover {
-            background: #00ffff;
-            color: #000;
+            border: 3px solid #ff0000;
+            box-shadow: 0 0 30px #ff0000;
         }
 
         /* Sections */
@@ -157,6 +136,7 @@
             font-size: 3rem;
             text-align: center;
             margin-bottom: 30px;
+            text-transform: uppercase;
         }
 
         .section-subtitle {
@@ -197,13 +177,13 @@
             margin: 0 10px;
             border-radius: 15px;
             overflow: hidden;
-            border: 2px solid #00ffff;
-        }
-
-        .scroller-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            border: 2px solid #ff0000;
+            background: #333; /* Placeholder background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
         }
 
         @keyframes scroll {
@@ -224,7 +204,7 @@
             padding: 30px;
             border-radius: 15px;
             text-align: center;
-            border: 1px solid #00ffff;
+            border: 1px solid #ff0000;
             transition: transform 0.3s;
         }
 
@@ -235,7 +215,7 @@
         .feature-title {
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: #00ffff;
+            color: #ff0000;
         }
 
         /* Meme gallery */
@@ -249,27 +229,29 @@
         .meme-item {
             border-radius: 15px;
             overflow: hidden;
-            border: 2px solid #00ffff;
+            border: 2px solid #ff0000;
             transition: transform 0.3s;
+            background: #333; /* Placeholder background */
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
         }
 
         .meme-item:hover {
             transform: scale(1.05);
         }
 
-        .meme-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Social section */
-        .social-section {
+        /* Buy section */
+        .buy-section {
             text-align: center;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #2e1a1a 0%, #3e1616 100%);
             border-radius: 20px;
             padding: 60px 40px;
             margin-top: 50px;
+            border: 2px solid #ff0000;
         }
 
         /* Footer */
@@ -277,7 +259,7 @@
             background: #0a0a0a;
             padding: 40px 20px;
             text-align: center;
-            border-top: 2px solid #00ffff;
+            border-top: 2px solid #ff0000;
         }
 
         .footer-content {
@@ -318,170 +300,126 @@
             }
         }
 
-        /* Noise overlay */
-        .noise-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" opacity="0.1"><filter id="a"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23a)"/></svg>');
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: overlay;
-            opacity: 0.3;
+        /* Battle cry */
+        .battle-cry {
+            font-size: 3rem;
+            color: #ff0000;
+            text-align: center;
+            margin: 30px 0;
+            animation: pulse 2s infinite;
+            text-transform: uppercase;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
-    <div class="noise-overlay"></div>
-
     <!-- Header -->
     <header>
         <div class="nav-container">
-            <div class="logo rainbow-text">GigaChad</div>
+            <div class="logo rainbow-text">GRUMIO</div>
             <nav class="nav-menu">
                 <a href="#about">ABOUT</a>
                 <a href="#features">FEATURES</a>
                 <a href="#buy">BUY</a>
                 <a href="#memes">MEMES</a>
-                <a href="#social">SOCIAL</a>
             </nav>
-            <a href="#" class="buy-button">BUY $CHAD</a>
+            <a href="https://pump.fun/" class="buy-button">BUY $TENETTE</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1 class="rainbow-text">GIGACHAD</h1>
-        <img src="https://i.imgur.com/7QXZP4p.png" alt="GigaChad" class="hero-image">
-        <div class="hero-links">
-            <a href="#">DEXSCREENER</a>
-            <a href="#">TWITTER</a>
-            <a href="#">TELEGRAM</a>
-            <a href="#">SOLSCAN</a>
+        <h1 class="rainbow-text">GRUMIO</h1>
+        <div class="battle-cry">INCREDIBILIS!</div>
+        <div class="hero-image">
+            <!-- Placeholder for Grumio image -->
+            <div style="color: white; font-size: 1.2rem;">GRUMIO IMAGE</div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
         <h2 class="section-title rainbow-text">About</h2>
-        <h3 class="section-subtitle glow-text">$CHAD</h3>
+        <h3 class="section-subtitle glow-text">$TENETTE</h3>
         <div class="about-content">
-            <p>GigaChad is not just a meme - it's a lifestyle. The ultimate symbol of peak performance, 
-            unwavering confidence, and absolute dominance in the crypto space.</p>
+            <p>INCREDIBILIS! The legendary knight of pure, unadulterated chaos has arrived on Solana.</p>
             <br>
-            <p>$CHAD represents the alpha mentality that separates winners from losers. While weak hands 
-            paper-hand their bags, true Chads diamond-hand their way to financial freedom.</p>
+            <p>$TENETTE is the embodiment of the "RAH!" energy in your portfolio. No strategy, no utility, 
+            only pure, incredibilis strength. Contract renounced. No taxes. Just vibes and shoulder bashes.</p>
             <br>
-            <p>Zero tax, max gains. Contract renounced. No weak energy allowed.</p>
+            <p>When weak hands paper-hand their bags, true warriors scream "INCREDIBILIS!" and hold through the chaos.</p>
         </div>
 
         <!-- Infinite Scroller -->
         <div class="infinite-scroller">
             <div class="scroller-track">
-                <div class="scroller-item">
-                    <img src="https://i.imgur.com/7QXZP4p.png" alt="Chad 1">
-                </div>
-                <div class="scroller-item">
-                    <img src="https://i.imgur.com/kEa2B3q.png" alt="Chad 2">
-                </div>
-                <div class="scroller-item">
-                    <img src="https://i.imgur.com/mN8p7F2.png" alt="Chad 3">
-                </div>
-                <div class="scroller-item">
-                    <img src="https://i.imgur.com/9rV8cL7.png" alt="Chad 4">
-                </div>
-                <div class="scroller-item">
-                    <img src="https://i.imgur.com/7QXZP4p.png" alt="Chad 5">
-                </div>
-                <div class="scroller-item">
-                    <img src="https://i.imgur.com/kEa2B3q.png" alt="Chad 6">
-                </div>
+                <div class="scroller-item">GRUMIO MEME 1</div>
+                <div class="scroller-item">GRUMIO MEME 2</div>
+                <div class="scroller-item">GRUMIO MEME 3</div>
+                <div class="scroller-item">GRUMIO MEME 4</div>
+                <div class="scroller-item">GRUMIO MEME 5</div>
+                <div class="scroller-item">GRUMIO MEME 6</div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section id="features">
-        <h2 class="section-title rainbow-text">Alpha Features</h2>
+        <h2 class="section-title rainbow-text">Warrior Features</h2>
         <div class="features">
             <div class="feature-card">
                 <h3 class="feature-title">0% TAX</h3>
-                <p>No taxes, no bullsh*t. Pure alpha energy only.</p>
+                <p>No taxes, no surrender. Pure battle energy only.</p>
             </div>
             <div class="feature-card">
                 <h3 class="feature-title">CONTRACT RENOUNCED</h3>
-                <p>Fully decentralized. No rug pulls, Chad's honor.</p>
+                <p>Fully decentralized. No retreat, no surrender.</p>
             </div>
             <div class="feature-card">
-                <h3 class="feature-title">COMMUNITY OWNED</h3>
-                <p>By the Chads, for the Chads. Always.</p>
+                <h3 class="feature-title">BATTLE TESTED</h3>
+                <p>By warriors, for warriors. INCREDIBILIS!</p>
             </div>
         </div>
     </section>
 
     <!-- Buy Section -->
     <section id="buy">
-        <h2 class="section-title rainbow-text">Buy Sum</h2>
-        <h3 class="section-subtitle glow-text">$CHAD</h3>
-        <div class="about-content">
-            <p>Join the alpha movement. Buy $CHAD on Pump.fun or any Solana DEX.</p>
-            <br>
-            <p>Connect your wallet, swap SOL for $CHAD, and start your journey to becoming a crypto Chad.</p>
-            <br>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
-                <a href="#" class="buy-button">BUY $CHAD</a>
-                <a href="#" class="buy-button">VIEW CHART</a>
+        <div class="buy-section">
+            <h2 class="section-title rainbow-text">Join The Battle!</h2>
+            <h3 class="section-subtitle glow-text">BUY $TENETTE</h3>
+            <div class="about-content">
+                <p>Ready to scream INCREDIBILIS? Buy $TENETTE on Pump.fun and join the legendary warriors.</p>
+                <br>
+                <p>Connect your wallet, swap SOL for $TENETTE, and prepare for battle!</p>
+                <br>
+                <a href="https://pump.fun/" class="buy-button" style="font-size: 1.3rem; padding: 15px 30px;">BUY $TENETTE NOW</a>
             </div>
         </div>
     </section>
 
     <!-- Memes Section -->
     <section id="memes">
-        <h2 class="section-title rainbow-text">Chad Memes</h2>
+        <h2 class="section-title rainbow-text">Warrior Memes</h2>
         <div class="meme-gallery">
-            <div class="meme-item">
-                <img src="https://i.imgur.com/7QXZP4p.png" alt="Meme 1">
-            </div>
-            <div class="meme-item">
-                <img src="https://i.imgur.com/kEa2B3q.png" alt="Meme 2">
-            </div>
-            <div class="meme-item">
-                <img src="https://i.imgur.com/mN8p7F2.png" alt="Meme 3">
-            </div>
-            <div class="meme-item">
-                <img src="https://i.imgur.com/9rV8cL7.png" alt="Meme 4">
-            </div>
-            <div class="meme-item">
-                <img src="https://i.imgur.com/7QXZP4p.png" alt="Meme 5">
-            </div>
-            <div class="meme-item">
-                <img src="https://i.imgur.com/kEa2B3q.png" alt="Meme 6">
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Section -->
-    <section id="social">
-        <div class="social-section">
-            <h2 class="section-title rainbow-text">Join The</h2>
-            <h3 class="section-subtitle glow-text">CHAD ARMY</h3>
-            <div class="about-content">
-                <p>Follow us on social media, share memes, and help build the strongest community in crypto.</p>
-                <br>
-                <p>Weakness is not an option. Only diamond hands allowed.</p>
-                <br>
-                <a href="#" class="buy-button">FOLLOW ON TWITTER</a>
-            </div>
+            <div class="meme-item">MEME 1</div>
+            <div class="meme-item">MEME 2</div>
+            <div class="meme-item">MEME 3</div>
+            <div class="meme-item">MEME 4</div>
+            <div class="meme-item">MEME 5</div>
+            <div class="meme-item">MEME 6</div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="logo rainbow-text">GIGACHAD</div>
-            <div>CONTACT@GIGACHAD.COM</div>
+            <div class="logo rainbow-text">GRUMIO</div>
+            <div class="battle-cry" style="font-size: 1.5rem;">INCREDIBILIS!</div>
         </div>
     </footer>
 
@@ -516,6 +454,14 @@
             setInterval(() => {
                 heroImage.style.transform = `translateY(${Math.sin(Date.now() / 1000) * 10}px)`;
             }, 50);
+        }
+
+        // Battle cry animation
+        const battleCry = document.querySelector('.battle-cry');
+        if (battleCry) {
+            setInterval(() => {
+                battleCry.style.textShadow = `0 0 20px rgba(255, 0, 0, ${0.5 + Math.random() * 0.5})`;
+            }, 500);
         }
     </script>
 </body>
